@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.hellojasper.PrimaryController">
+   <children>
+      <Label text="Boletin de notas">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font></Label>
+      <TableView prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="colnombre" prefWidth="95.0" text="nombre" />
+          <TableColumn fx:id="colapellidos" prefWidth="160.0" text="apellidos" />
+            <TableColumn fx:id="colAD" minWidth="0.0" prefWidth="60.0" text="AD" />
+            <TableColumn fx:id="colSGE" minWidth="0.0" prefWidth="60.0" text="SGE" />
+            <TableColumn fx:id="colDI" minWidth="0.0" prefWidth="60.0" text="DI" />
+            <TableColumn fx:id="colPMDM" prefWidth="60.0" text="PMDM" />
+            <TableColumn fx:id="colPSP" prefWidth="60.0" text="PSP" />
+            <TableColumn fx:id="colEIE" prefWidth="60.0" text="EIE" />
+            <TableColumn fx:id="colHLC" prefWidth="60.0" text="HLC" />
+        </columns>
+         <tooltip>
+            <Tooltip text="Tabla de Alumnos" />
+         </tooltip>
+      </TableView>
+      <HBox prefHeight="24.0" prefWidth="674.0">
+         <children>
+            <Label text="Nuevo Alumno">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="25.0" prefWidth="674.0">
+         <children>
+            <TextField fx:id="tfnewnombre" minWidth="-Infinity" prefWidth="95.0" promptText="Nombre">
+               <tooltip>
+                  <Tooltip text="Nombre del Alumno" />
+               </tooltip></TextField>
+            <TextField fx:id="tfnewapellidos" minWidth="-Infinity" prefWidth="160.0" promptText="Apellidos">
+               <tooltip>
+                  <Tooltip text="Apellidos del Alumno" />
+               </tooltip></TextField>
+            <TextField fx:id="tfnewAD" minWidth="-Infinity" prefWidth="60.0" promptText="AD">
+               <tooltip>
+                  <Tooltip text="Nota en AD" />
+               </tooltip></TextField>
+            <TextField fx:id="tfnewSGE" minWidth="-Infinity" prefWidth="60.0" promptText="SGE">
+               <tooltip>
+                  <Tooltip text="Nota en SGE" />
+               </tooltip></TextField>
+            <TextField fx:id="tfnewDI" minWidth="-Infinity" prefWidth="60.0" promptText="DI">
+               <tooltip>
+                  <Tooltip text="Nota en DI" />
+               </tooltip></TextField>
+            <TextField fx:id="tfnewPMDM" minWidth="-Infinity" prefWidth="60.0" promptText="PMDM">
+               <tooltip>
+                  <Tooltip text="Nota en PMDM" />
+               </tooltip></TextField>
+            <TextField fx:id="tfnewPSP" minWidth="-Infinity" prefWidth="60.0" promptText="PSP">
+               <tooltip>
+                  <Tooltip text="Nota en PSP" />
+               </tooltip></TextField>
+            <TextField fx:id="tfnewEIE" minWidth="-Infinity" prefWidth="60.0" promptText="EIE">
+               <tooltip>
+                  <Tooltip text="Nota en EIE" />
+               </tooltip></TextField>
+            <TextField fx:id="tfnewHLC" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="60.0" promptText="HLC">
+               <tooltip>
+                  <Tooltip text="Nota en HLC" />
+               </tooltip></TextField>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="43.0" prefWidth="674.0" spacing="120.0">
+         <children>
+            <Button mnemonicParsing="false" text="Insertar Alumno">
+               <tooltip>
+                  <Tooltip text="Crea un nuevo Alumno" />
+               </tooltip></Button>
+            <Button fx:id="primaryButton" onAction="#verInforme" text="Descargar Notas">
+               <tooltip>
+                  <Tooltip text="Genera un PDF con las notas" />
+               </tooltip></Button>
+            <Button mnemonicParsing="false" text="Salir">
+               <tooltip>
+                  <Tooltip text="Salir del programa" />
+               </tooltip></Button>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
